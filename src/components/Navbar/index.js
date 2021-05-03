@@ -23,7 +23,7 @@ export default function Navbar() {
       <Nav>
         <NavbarContainer>
           <NavLogo to='/'>
-            <h1>Shoppies</h1>
+            <img src='/logo_transparent.png' style={{ width: '300px' }} />
           </NavLogo>
           <MobileIcon>
             <FaBars />
