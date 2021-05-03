@@ -101,7 +101,7 @@ margin-top: 4px;
 `;
 
 export const Input = styled.input`
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   background-color: transparent;
   width: 100%;
@@ -126,5 +126,5 @@ export const Button = styled.button`
   border: none;
   outline: none;
   color: white;
-  font-size: 1.5rem
+  font-size: 2rem
 `;

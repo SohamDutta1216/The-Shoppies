@@ -3,7 +3,7 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, 
 import { FaBars } from 'react-icons/fa'
 import { BsSearch } from 'react-icons/bs'
 
-export default function Navbar({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit }) {
+export default function Navbar({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle }) {
 
   return (
     <>
@@ -12,7 +12,7 @@ export default function Navbar({ input, setInput, barOpened, setBarOpened, formR
           <NavLogo to='/'>
             <img src='/logo_transparent.png' style={{ width: '300px' }} />
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -20,20 +20,16 @@ export default function Navbar({ input, setInput, barOpened, setBarOpened, formR
               <Form
                 barOpened={barOpened}
                 onClick={() => {
-                  // When form clicked, set state of baropened to true and focus the input
                   setBarOpened(true);
                   inputFocus.current.focus();
                 }}
-                // on focus open search bar
                 onFocus={() => {
                   setBarOpened(true);
                   inputFocus.current.focus();
                 }}
-                // on blur close search bar
                 onBlur={() => {
                   setBarOpened(false);
                 }}
-                // On submit, call the onFormSubmit function
                 onSubmit={onFormSubmit}
                 ref={formRef}
               >

@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import './App.css'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
+import Home from './components/Home'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
@@ -21,8 +20,7 @@ function App() {
 
   return (
     <Router>
-      <Sidebar barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} />
-      <Navbar barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} />
+      <Home barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} />
     </Router>
   );
 }
