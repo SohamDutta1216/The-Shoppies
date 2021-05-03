@@ -8,7 +8,6 @@ export default function FetchData() {
   const [results, setResults] = useState([])
   const [nominations, setNominations] = useLocalStorage('nominations', {})
   const [isLoading, setLoading] = useState(false)
-  const [toggle, setToggle] = useLocalStorage('toggle', false)
   const [nominNum, setNominNum] = useLocalStorage('nominNum', 0)
 
   useEffect(() => {
@@ -21,6 +20,6 @@ export default function FetchData() {
     })
   }, [movieSearch])
   return {
-    results, setResults, movieSearch, setSearch, isLoading, setLoading, nominations, setNominations, toggle, setToggle, nominNum, setNominNum
+    results, setResults, movieSearch, setSearch, isLoading, setLoading, nominations, setNominations, nominNum, setNominNum
   }
 }

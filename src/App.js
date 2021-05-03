@@ -2,12 +2,29 @@ import React, { useState, useRef } from "react";
 import './App.css'
 import Home from './components/Home'
 import { BrowserRouter as Router } from 'react-router-dom'
+import FetchData from './hooks/fetchData'
 
 function App() {
+  const {
+    results,
+    movieSearch,
+    isLoading,
+    setSearch,
+    setLoading,
+    nominations,
+    setNominations,
+    nominNum, setNominNum
+  } = FetchData();
+
   const [input, setInput] = useState("");
   const [barOpened, setBarOpened] = useState(false);
   const formRef = useRef();
   const inputFocus = useRef();
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
 
   const onFormSubmit = e => {
     // When form submited, clear input, close the searchbar and do something with input
@@ -20,7 +37,9 @@ function App() {
 
   return (
     <Router>
-      <Home barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} />
+      <div>
+        <Home barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
+      </div>
     </Router>
   );
 }

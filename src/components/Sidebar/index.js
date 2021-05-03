@@ -1,5 +1,5 @@
 import React from 'react'
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, Form, Button, Input } from './SidebarElements'
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, Form, Button, Input, SidebarItem } from './SidebarElements'
 import { BsSearch } from 'react-icons/bs'
 
 const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, isOpen, toggle }) => {
@@ -11,7 +11,7 @@ const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink>
+            <SidebarItem>
               <Form
                 barOpened={barOpened}
                 onClick={() => {
@@ -40,11 +40,12 @@ const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus
                   placeholder="Search for a movie..."
                 />
               </Form>
-            </SidebarLink>
-            <SidebarLink to='/home'>
+            </SidebarItem>
+
+            <SidebarLink to='/home' onClick={toggle}>
               Home
             </SidebarLink>
-            <SidebarLink to='/nominations'>
+            <SidebarLink to='/nominations' onClick={toggle}>
               My Nominations
             </SidebarLink>
           </SidebarMenu>
