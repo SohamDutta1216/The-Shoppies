@@ -1,22 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, Form, Button, Input } from './NavbarElements'
 import { FaBars } from 'react-icons/fa'
 import { BsSearch } from 'react-icons/bs'
 
-export default function Navbar() {
-  const [input, setInput] = useState("");
-  const [barOpened, setBarOpened] = useState(false);
-  const formRef = useRef();
-  const inputFocus = useRef();
-
-  const onFormSubmit = e => {
-    // When form submited, clear input, close the searchbar and do something with input
-    e.preventDefault();
-    setInput("");
-    setBarOpened(false);
-    // After form submit, do what you want with the input value
-    console.log(`Form was submited with input: ${input}`);
-  };
+export default function Navbar({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit }) {
 
   return (
     <>

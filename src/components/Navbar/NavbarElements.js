@@ -126,5 +126,5 @@ export const Button = styled.button`
   border: none;
   outline: none;
   color: white;
-  font-size: 30px
+  font-size: 1.5rem
 `;
