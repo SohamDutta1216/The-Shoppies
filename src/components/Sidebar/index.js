@@ -2,7 +2,7 @@ import React from 'react'
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, Form, Button, Input, SidebarItem } from './SidebarElements'
 import { BsSearch } from 'react-icons/bs'
 
-const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, isOpen, toggle }) => {
+const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, isOpen, toggle, movieSearch, setSearch }) => {
   return (
     <>
       <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -33,9 +33,9 @@ const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus
                   <BsSearch />
                 </Button>
                 <Input
-                  onChange={e => setInput(e.target.value)}
+                  onChange={e => setSearch(e.target.value)}
                   ref={inputFocus}
-                  value={input}
+                  value={movieSearch}
                   barOpened={barOpened}
                   placeholder="Search for a movie..."
                 />
