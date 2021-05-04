@@ -4,11 +4,11 @@ import { Link as LinkS } from 'react-scroll'
 
 export const Nav = styled.nav`
 background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
-height: 80px;
+height: 100px;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 1rem;
+font-size: 1.2rem;
 position: sticky;
 top: 0;
 z-index: 10;
@@ -31,7 +31,7 @@ export const NavLogo = styled(LinkR)`
 color: red;
 justify-self: flex-start;
 cursor: pointer;
-font-size: 1.5rem;
+font-size: 1.2rem;
 display: flex;
 align-items: center;
 margin-left: 24px;
@@ -69,7 +69,7 @@ export const NavItem = styled.li`
 height: 80px;
 `
 
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(LinkR)`
 color: #fff;
 display: flex;
 align-items: center;
@@ -101,7 +101,7 @@ margin-top: 4px;
 `;
 
 export const Input = styled.input`
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1;
   background-color: transparent;
   width: 100%;

@@ -3,14 +3,14 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, 
 import { FaBars } from 'react-icons/fa'
 import { BsSearch } from 'react-icons/bs'
 
-export default function Navbar({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle }) {
+export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle, movieSearch, setSearch }) {
 
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to='/'>
-            <img src='/logo_transparent.png' style={{ width: '300px' }} />
+            <img src='/logo_transparent.png' style={{ width: '290px' }} />
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
@@ -37,19 +37,19 @@ export default function Navbar({ input, setInput, barOpened, setBarOpened, formR
                   <BsSearch />
                 </Button>
                 <Input
-                  onChange={e => setInput(e.target.value)}
+                  onChange={e => setSearch(e.target.value)}
                   ref={inputFocus}
-                  value={input}
+                  value={movieSearch}
                   barOpened={barOpened}
                   placeholder="Search for a movie..."
                 />
               </Form>
             </NavItem>
             <NavItem>
-              <NavLinks to='home'>Home</NavLinks>
+              <NavLinks to="/">Home</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='nominations'>My Nominations</NavLinks>
+              <NavLinks to="/nominations">My Nominations</NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

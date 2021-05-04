@@ -42,7 +42,7 @@ const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus
               </Form>
             </SidebarItem>
 
-            <SidebarLink to='/home' onClick={toggle}>
+            <SidebarLink to='/' onClick={toggle}>
               Home
             </SidebarLink>
             <SidebarLink to='/nominations' onClick={toggle}>
