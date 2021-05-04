@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../Sidebar'
 import Navbar from '../Navbar'
-import Movies from '../Movies/Movies'
+import Movies from '../Movies'
 import './Home.css'
 
 const Home = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, isOpen, setIsOpen, toggle, movieSearch, setSearch, results }) => {
