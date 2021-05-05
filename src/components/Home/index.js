@@ -2,7 +2,6 @@ import React from 'react'
 import Sidebar from '../Sidebar'
 import Navbar from '../Navbar'
 import Movies from '../Movies'
-import './Home.css'
 
 const Home = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, isOpen, setIsOpen, toggle, movieSearch, setSearch, results }) => {
 
@@ -13,8 +12,12 @@ const Home = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, o
 
       <Navbar toggle={toggle} barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} movieSearch={movieSearch} setSearch={setSearch} />
 
+
+      <h2 style={{ marginLeft: '100px', marginTop: '50px' }}>Movies</h2>
       <Movies results={results} />
+
     </div>
+
   )
 }
 
