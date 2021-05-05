@@ -3,14 +3,18 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, 
 import { FaBars } from 'react-icons/fa'
 import { BsSearch } from 'react-icons/bs'
 
-export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle, movieSearch, setSearch }) {
+export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle, movieSearch, setSearch, setLoading }) {
 
+  const searching = (e) => {
+    setLoading(true)
+    setSearch(e.target.value)
+  }
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to='/'>
-            <img src='/logo_transparent.png' style={{ width: '290px' }} />
+            <img src='/logo_transparent.png' style={{ width: '300px', marginBottom: '20px' }} />
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
@@ -37,7 +41,7 @@ export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, o
                   <BsSearch />
                 </Button>
                 <Input
-                  onChange={e => setSearch(e.target.value)}
+                  onChange={e => searching(e)}
                   ref={inputFocus}
                   value={movieSearch}
                   barOpened={barOpened}

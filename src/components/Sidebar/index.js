@@ -41,10 +41,6 @@ const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus
                 />
               </Form>
             </SidebarItem>
-
-            <SidebarLink to='/' onClick={toggle}>
-              Home
-            </SidebarLink>
             <SidebarLink to='/nominations' onClick={toggle}>
               My Nominations
             </SidebarLink>

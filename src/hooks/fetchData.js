@@ -4,7 +4,7 @@ import useLocalStorage from '../useLocalStorage'
 
 export default function FetchData() {
 
-  const [movieSearch, setSearch] = useState('Star Wars')
+  const [movieSearch, setSearch] = useState('')
   const [results, setResults] = useState([])
   const [nominations, setNominations] = useLocalStorage('nominations', {})
   const [isLoading, setLoading] = useState(false)
@@ -16,7 +16,7 @@ export default function FetchData() {
         const movieData = res.data.Search
         setLoading(false)
         setResults(movieData)
-      }, 400)
+      }, 1000)
     })
   }, [movieSearch])
   return {

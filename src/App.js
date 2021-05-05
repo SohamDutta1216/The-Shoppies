@@ -26,13 +26,14 @@ function App() {
 
   const onFormSubmit = e => {
     e.preventDefault();
+    setLoading(true)
     setBarOpened(false);
     setSearch(movieSearch)
   };
   return (
     <Router>
       <div>
-        <Home barOpened={barOpened} setBarOpened={setBarOpened} movieSearch={movieSearch} setSearch={setSearch} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} results={results} />
+        <Home barOpened={barOpened} setBarOpened={setBarOpened} movieSearch={movieSearch} setSearch={setSearch} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} results={results} isLoading={isLoading} setLoading={setLoading} />
       </div>
     </Router>
   );
