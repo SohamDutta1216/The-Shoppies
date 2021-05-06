@@ -1,6 +1,7 @@
 import React from 'react'
 
-const index = () => {
+const index = ({ nominations, setNominations }) => {
+  console.log(nominations)
   return (
     <div>
 

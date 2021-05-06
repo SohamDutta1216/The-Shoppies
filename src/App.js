@@ -33,7 +33,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Home barOpened={barOpened} setBarOpened={setBarOpened} movieSearch={movieSearch} setSearch={setSearch} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} results={results} isLoading={isLoading} setLoading={setLoading} />
+        <Home barOpened={barOpened} setBarOpened={setBarOpened} movieSearch={movieSearch} setSearch={setSearch} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} results={results} isLoading={isLoading} setLoading={setLoading} nominations={nominations} setNominations={setNominations} />
       </div>
     </Router>
   );

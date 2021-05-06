@@ -4,7 +4,11 @@ import './movie.css'
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import ReactTooltip from 'react-tooltip';
 
-const index = ({ movie }) => {
+const index = ({ movie, nominations, setNominations }) => {
+  function click() {
+    setNominations({ ...nominations, [movie.Title]: [movie] })
+  }
+  console.log(nominations)
   return (
     <div>
       <div style={{ textAlign: 'center' }}>
@@ -16,7 +20,7 @@ const index = ({ movie }) => {
               <p className='bio'>{movie.Title}</p>
               <p className='bio'>{movie.Year}</p>
             </div>
-            <AiOutlineStar data-tip='Nominate this movie' />
+            <AiOutlineStar data-tip='Nominate this movie' onClick={click} />
           </div>
         </div>
       </div>

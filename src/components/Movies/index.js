@@ -4,11 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import './movies.css'
 import { CircleSpinner } from 'react-spinners-kit'
 
-export default function Movies({ results, isLoading, movieSearch }) {
+export default function Movies({ results, isLoading, nominations, setNominations }) {
   return (
     <div>
       {isLoading ?
-        <div className='center'>
+        <div className='center-container'>
           <CircleSpinner />
         </div>
         :
@@ -18,13 +18,12 @@ export default function Movies({ results, isLoading, movieSearch }) {
               <div className='row'>
                 {results && results.map((movie) => {
                   return (
-                    <Movie movie={movie} />
+                    <Movie movie={movie} nominations={nominations} setNominations={setNominations} />
                   )
                 })}
               </div>
             </div>
             :
-
             <div className='placeholder'> Search for movies! </div>}
         </div>
 

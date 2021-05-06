@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
-import useLocalStorage from '../useLocalStorage'
+import useLocalStorage from './useLocalStorage'
 
 export default function FetchData() {
 
@@ -16,7 +16,7 @@ export default function FetchData() {
         const movieData = res.data.Search
         setLoading(false)
         setResults(movieData)
-      }, 1000)
+      }, 0)
     })
   }, [movieSearch])
   return {
