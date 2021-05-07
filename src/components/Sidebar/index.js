@@ -41,9 +41,6 @@ const Sidebar = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus
                 />
               </Form>
             </SidebarItem>
-            <SidebarLink to='/nominations' onClick={toggle}>
-              My Nominations
-            </SidebarLink>
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarContainer>

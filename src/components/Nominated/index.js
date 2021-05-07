@@ -1,7 +1,12 @@
 import React from 'react'
+import { IoMdRemoveCircleOutline } from "react-icons/io";
 
-const index = ({ nominate }) => {
+
+const index = ({ nominate, removeNomination }) => {
   const movie = nominate[0]
+  const click = () => {
+    removeNomination(movie.Title)
+  }
   return (
     <div>
       <div style={{ textAlign: 'center' }}>
@@ -11,6 +16,7 @@ const index = ({ nominate }) => {
             <div className='col'>
               <p className='bio'>{movie.Title}</p>
               <p className='bio'>{movie.Year}</p>
+              <IoMdRemoveCircleOutline onClick={click} />
             </div>
           </div>
         </div>

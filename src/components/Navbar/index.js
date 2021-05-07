@@ -50,9 +50,6 @@ export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, o
                 />
               </Form>
             </NavItem>
-            <NavItem>
-              <NavLinks to="/nominations">My Nominations</NavLinks>
-            </NavItem>
           </NavMenu>
         </NavbarContainer>
       </Nav>
