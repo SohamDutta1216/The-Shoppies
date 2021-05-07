@@ -6,7 +6,7 @@ export default function FetchData() {
 
   const [movieSearch, setSearch] = useState('')
   const [results, setResults] = useState([])
-  const [nominations, setNominations] = useLocalStorage('nominations', {})
+  const [nominations, setNominations] = useLocalStorage('nominations', [])
   const [isLoading, setLoading] = useState(false)
   const [nominNum, setNominNum] = useLocalStorage('nominNum', 0)
 

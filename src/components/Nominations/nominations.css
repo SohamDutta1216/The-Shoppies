@@ -1,0 +1,14 @@
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.placeholder {
+  text-align: center;
+}
+
+.center-container {
+  margin:auto;
+  width: 1%;
+text-align: center;
+}

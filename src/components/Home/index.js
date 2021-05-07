@@ -12,7 +12,7 @@ const Home = ({ input, setInput, barOpened, setBarOpened, formRef, inputFocus, o
     <div>
       <Sidebar isOpen={isOpen} toggle={toggle} barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} movieSearch={movieSearch} setSearch={setSearch} />
 
-      <Navbar toggle={toggle} barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} movieSearch={movieSearch} setSearch={setSearch} setLoading={setLoading} />
+      <Navbar toggle={toggle} barOpened={barOpened} setBarOpened={setBarOpened} input={input} setInput={setInput} formRef={formRef} inputFocus={inputFocus} onFormSubmit={onFormSubmit} movieSearch={movieSearch} setSearch={setSearch} setLoading={setLoading} isLoading={isLoading} />
 
       <h2 className='title'>Movies</h2>
       <Movies results={results} isLoading={isLoading} nominations={nominations} setNominations={setNominations} />

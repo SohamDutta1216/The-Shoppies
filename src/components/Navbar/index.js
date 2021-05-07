@@ -3,7 +3,7 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, 
 import { FaBars } from 'react-icons/fa'
 import { BsSearch } from 'react-icons/bs'
 
-export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle, movieSearch, setSearch, setLoading }) {
+export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, onFormSubmit, toggle, movieSearch, setSearch, setLoading, isLoading }) {
 
   const searching = (e) => {
     setLoading(true)
@@ -36,6 +36,7 @@ export default function Navbar({ barOpened, setBarOpened, formRef, inputFocus, o
                 }}
                 onSubmit={onFormSubmit}
                 ref={formRef}
+                onEnter
               >
                 <Button type="submit" barOpened={barOpened}>
                   <BsSearch />
