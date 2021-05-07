@@ -4,8 +4,9 @@ import ReactTooltip from 'react-tooltip';
 
 const index = ({ nominate, removeNomination }) => {
   const movie = nominate[0]
+
   const click = () => {
-    removeNomination(movie.Title)
+    removeNomination(movie.imdbID)
   }
   return (
     <div>
@@ -17,8 +18,9 @@ const index = ({ nominate, removeNomination }) => {
             <div className='col'>
               <p className='bio'>{movie.Title}</p>
               <p className='bio'>{movie.Year}</p>
-              <IoMdRemoveCircleOutline data-tip='Remove' onClick={click} />
             </div>
+            <IoMdRemoveCircleOutline data-tip='Remove' onClick={click} />
+
           </div>
         </div>
       </div>
