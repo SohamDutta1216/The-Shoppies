@@ -44,21 +44,24 @@ export default function Index({ movie, nominations, setNominations }) {
               closeTimeoutMS={500}
             >
 
-              <CgClose style={{ height: '50px', width: '30px' }} className='float-right' onClick={triggerModal} />
-              <div className='contain'>
-                <h1 >{info.Title}</h1>
-                <img src={info.Poster} alt='Movie' style={{ width: '200px', height: '300px', }} />
+              <CgClose style={{ height: '20%', width: '30px' }} className='float-right' onClick={triggerModal} />
+              <div className='container'>
+                <div class="row">
+                  <div class="col">
+                    <h3>{info.Title}</h3>
+                    <img src={info.Poster} alt='Movie' style={{ width: '200px', height: '300px', }} />
+                    <div >IMDB rating: {info.imdbRating} | Runtime: {info.Runtime} | Rated {info.Rated}</div>
+                    <div >Cast: {info.Actors}</div>
 
-                <div style={{}}>imdb rating: {info.imdbRating}</div>
-                <div  >Runtime: {info.Runtime}</div>
-                <div >Genre: {info.Genre}</div>
-                <div >Rated {info.Rated}</div>
-                <div >Released {info.Released}</div>
+
+
+                  </div>
+                  <div className='col'>
+                    <div >{info.Plot}</div>
+
+                  </div>
+                </div>
               </div>
-              <div >{info.Plot}</div>
-              <div >Cast: {info.Actors}</div>
-
-
             </Modal>
 
           </div>

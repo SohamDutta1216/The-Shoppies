@@ -52,10 +52,11 @@ opacity: 1;
   transform: translate(-50%, -50%);
   border: 1px grey;
   background:black;
-  overflow: auto;
+  overflow: scroll;
   border-radius: 4px;
   outline: none;
   padding: 20px;
+
 }
 
 .myoverlay {
