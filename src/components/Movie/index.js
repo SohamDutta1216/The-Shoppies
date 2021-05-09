@@ -38,32 +38,36 @@ export default function Index({ movie, nominations, setNominations }) {
             <Modal
               isOpen={showModal}
               onRequestClose={triggerModal}
-              contentLabel="My dialog"
               className="mymodal"
               overlayClassName="myoverlay"
               closeTimeoutMS={500}
+              shouldCloseOnEsc={
+                true}
+
+
             >
 
-              <CgClose style={{ height: '20%', width: '30px' }} className='float-right' onClick={triggerModal} />
               <div className='container'>
                 <div class="row">
                   <div class="col">
-                    <h3>{info.Title}</h3>
-                    <img src={info.Poster} alt='Movie' style={{ width: '200px', height: '300px', }} />
-                    <div >IMDB rating: {info.imdbRating} | Runtime: {info.Runtime} | Rated {info.Rated}</div>
-                    <div >Cast: {info.Actors}</div>
 
+                    <CgClose style={{ height: '20%', width: '30px' }} className='float-right' onClick={triggerModal} />
+                    <h5>{info.Title}</h5>
 
+                    <img src={info.Poster} alt='Movie' style={{ width: '150px', height: '200px' }} />
 
                   </div>
                   <div className='col'>
-                    <div >{info.Plot}</div>
+                    <div >IMDB rating: {info.imdbRating} | Runtime: {info.Runtime} | Rated:  {info.Rated}</div>
+                    <div >Cast: {info.Actors}</div>
+                    <hr class="solid"></hr>
+                    <div style={{ marginTop: '20px' }}>{info.Plot}</div>
 
                   </div>
                 </div>
               </div>
-            </Modal>
 
+            </Modal>
           </div>
         </div>
       </div>

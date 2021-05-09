@@ -5,7 +5,7 @@ export default function FetchInfo() {
   const [idSearch, setId] = useState('')
   const [info, setInfo] = useState([])
   useEffect(() => {
-    axios.get(`https://www.omdbapi.com/?apikey=d5633076&i=${idSearch}&plot=full`).then(res => {
+    axios.get(`https://www.omdbapi.com/?apikey=d5633076&i=${idSearch}&plot=short`).then(res => {
       setTimeout(() => {
         const movieData = res.data
         console.log(movieData)

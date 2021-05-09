@@ -46,6 +46,7 @@ opacity: 1;
 }
 
 .mymodal {
+  display:inline-flex;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -53,9 +54,9 @@ opacity: 1;
   border: 1px grey;
   background:black;
   overflow: scroll;
-  border-radius: 4px;
+  border-radius: 5px;
   outline: none;
-  padding: 20px;
+
 
 }
 
@@ -72,8 +73,6 @@ opacity: 1;
   color: black;
   text-align: center;
 }
-
-CgClose :hover{
-  cursor: pointer;
-  transform: scale(1.1)
+hr.solid {
+  border-top: 3px solid white;
 }
