@@ -13,7 +13,6 @@ export default function Index({ movie, nominations, setNominations }) {
 
   function click() {
     setNominations({ ...nominations, [movie.imdbID]: [movie] })
-    movie.clicked = true
   }
   function triggerModal() {
     setShowModal(prev => !prev)
@@ -34,9 +33,7 @@ export default function Index({ movie, nominations, setNominations }) {
               <p className='bio'>{movie.Title}</p>
               <p className='bio'>{movie.Year}</p>
             </div>
-            {movie.clicked ? <div> </div> : <div><AiOutlineStar data-tip='Nominate this movie' onClick={click} /> </div>}
-
-
+            <AiOutlineStar data-tip='Nominate this movie' onClick={click} />
             <Modal
               isOpen={showModal}
               onRequestClose={triggerModal}
