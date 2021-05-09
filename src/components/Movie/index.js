@@ -13,6 +13,7 @@ export default function Index({ movie, nominations, setNominations }) {
 
   function click() {
     setNominations({ ...nominations, [movie.imdbID]: [movie] })
+    movie.clicked = true
   }
   function triggerModal() {
     setShowModal(prev => !prev)
@@ -33,7 +34,8 @@ export default function Index({ movie, nominations, setNominations }) {
               <p className='bio'>{movie.Title}</p>
               <p className='bio'>{movie.Year}</p>
             </div>
-            <AiOutlineStar data-tip='Nominate this movie' onClick={click} />
+            {movie.clicked ? <div> </div> : <div><AiOutlineStar data-tip='Nominate this movie' onClick={click} /> </div>}
+
 
             <Modal
               isOpen={showModal}
@@ -46,17 +48,16 @@ export default function Index({ movie, nominations, setNominations }) {
 
 
             >
-
+              <CgClose style={{ height: '20%', width: '30px' }} className='float-right' onClick={triggerModal} />
               <div className='container'>
                 <div class="row">
                   <div class="col">
-
-                    <CgClose style={{ height: '20%', width: '30px' }} className='float-right' onClick={triggerModal} />
                     <h5>{info.Title}</h5>
 
                     <img src={info.Poster} alt='Movie' style={{ width: '150px', height: '200px' }} />
 
                   </div>
+
                   <div className='col'>
                     <div >IMDB rating: {info.imdbRating} | Runtime: {info.Runtime} | Rated:  {info.Rated}</div>
                     <div >Cast: {info.Actors}</div>

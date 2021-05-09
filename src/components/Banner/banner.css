@@ -1,5 +1,5 @@
 .image-container {
-  position: relative;
+  position:fixed;
   transition: transform 0.2s;
 }
 

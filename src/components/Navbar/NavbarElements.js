@@ -30,7 +30,6 @@ position: sticky;
 export const NavLogo = styled(LinkR)`
 color: red;
 justify-self: flex-start;
-cursor: pointer;
 font-size: 1.2rem;
 display: flex;
 align-items: center;
